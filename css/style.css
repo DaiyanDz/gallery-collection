@@ -1,0 +1,139 @@
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.tag-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tag {
+    font-size: 16px;
+    width: 90px;
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.tag:first-child {
+    outline: solid #00ab4a;
+}
+
+.tag:first-child:hover {
+    background-color: #6eff14;
+}
+
+.tag:nth-child(2) {
+    outline: solid #000;
+}
+.tag:nth-child(2):hover {
+    background-color: #bdbdbd;
+}
+
+.tag:nth-child(3) {
+    outline: solid #ff7700;
+}
+.tag:nth-child(3):hover {
+    background-color: #fbaf3e;
+}
+
+.tag:nth-child(4) {
+    outline: solid #0044ff;
+}
+.tag:nth-child(4):hover {
+    background-color: 	rgb(122, 180, 251);
+}
+
+.tag:nth-child(5) {
+    outline: solid rgb(115, 0, 255);
+}
+.tag:nth-child(5):hover {
+    background-color: #deafee;
+}
+
+.photo-container {
+    column-count: 4;
+    gap: 10px;
+}
+
+.photo {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 0;
+    left: 20%;
+    transform: translate(-0, -50%);
+    width: 60%;
+    max-width: 100%;
+    height: 80svh; /* Set maximum height to 100% of the viewport height */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    flex-grow: 1;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.landscape #modalImage {
+    width: 100%;
+    height: auto;
+}
+
+.portrait #modalImage {
+    width: auto;
+    height: 100%;
+}
